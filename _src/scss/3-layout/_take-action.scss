@@ -1,0 +1,76 @@
+.take-action {
+  background: $main-clr;
+  padding: 150px 0;
+
+  .overlay-photo-image-bg {
+    background-image: url("../assets/images/sections-bg-images/take-action.jpg");
+    opacity: 1;
+  }
+
+  .overlay-color {
+    opacity: 0.5 !important;
+  }
+
+  .section-heading {
+    .section-title {
+      color: $grey-clr;
+    }
+
+    .section-subtitle {
+      color: $grey-clr;
+    }
+
+    .line {
+      background-color: $white-clr;
+    }
+  }
+
+  .cta-link {
+    background-color: transparent;
+    border-color: $white-clr;
+    color: $white-clr;
+
+    &:hover {
+      background-color: $main-clr;
+      border-color: $main-clr;
+      color: $white-clr;
+    }
+  }
+}
+
+.subscribe {
+  .overlay-photo-image-bg {
+    background-image: url("../assets/images/sections-bg-images/subscribe.jpg");
+    opacity: 1;
+  }
+
+  .overlay-color {
+    opacity: 0.5 !important;
+  }
+
+  .tag-line {
+    color: $white-clr;
+  }
+
+  .section-heading {
+    .section-title {
+      color: $grey-clr;
+    }
+
+    .section-subtitle {
+      color: $grey-clr;
+    }
+
+    .line {
+      background-color: $white-clr;
+    }
+  }
+
+  .subscribe-btn {
+    &:hover {
+      background: transparent;
+      color: $white-clr;
+      border-color: $white-clr;
+    }
+  }
+}

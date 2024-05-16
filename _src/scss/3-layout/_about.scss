@@ -1,0 +1,517 @@
+.about {
+  .content-block {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &.wide-section {
+      margin-bottom: 0 !important;
+      background-color: $extra-dark-grey-clr;
+
+      .text-area {
+        // margin: 0 3rem;
+        padding: 6rem 4rem;
+
+        @media (min-width: 1920px) {
+          max-width: 950px;
+          margin: 0 auto;
+        }
+
+        @include ma-md-screens {
+          margin: 0 1rem;
+          padding: 3rem 0;
+        }
+      }
+
+      .wide-img-area {
+        @include ma-md-screens {
+          max-height: 500px;
+        }
+      }
+    }
+
+    .pad-start {
+      .text-area {
+        padding-#{$start-direction}: 2rem;
+
+        @include ma-md-screens {
+          padding-#{$start-direction}: 0;
+        }
+      }
+    }
+
+    .pad-end {
+      .text-area {
+        padding-#{$end-direction}: 2rem;
+
+        @include ma-md-screens {
+          padding-#{$end-direction}: 0;
+        }
+      }
+    }
+  }
+
+  .about-col,
+  .img-area {
+    position: relative;
+    z-index: 0;
+
+    .photo-banner-start,
+    .photo-banner-end {
+      position: absolute;
+      min-width: 100px;
+      min-height: 250px;
+      background-color: $main-clr;
+      color: $white-clr;
+      border: 4px solid $white-clr;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      top: -2rem;
+      bottom: auto;
+
+      .number {
+        font-family: $fontSecondary;
+        font-size: 6rem;
+        font-weight: 900;
+        line-height: 1;
+
+        @include ma-sm-screens {
+          font-size: 4rem;
+          font-weight: 700;
+        }
+      }
+
+      .banner-text {
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin: 0;
+
+        @include ma-sm-screens {
+          font-size: 1rem;
+        }
+      }
+
+      .line {
+        background-color: $white-clr;
+      }
+
+      .read-more {
+        color: $white-clr;
+      }
+
+      @include ma-sm-screens {
+        top: -1.5rem !important;
+        bottom: auto !important;
+        #{$start-direction}: auto !important;
+        #{$end-direction}: -1.5rem !important;
+        min-height: 180px;
+      }
+
+      @include ma-xs-screens {
+        top: 0rem !important;
+        bottom: auto !important;
+        #{$start-direction}: auto !important;
+        #{$end-direction}: 0rem !important;
+      }
+    }
+
+    .photo-banner-start {
+      #{$start-direction}: -2rem;
+      #{$end-direction}: auto;
+    }
+
+    .photo-banner-end {
+      #{$start-direction}: auto;
+      #{$end-direction}: -2rem;
+    }
+
+    .banner-seal-logo {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      bottom: 1rem;
+      top: auto;
+      #{$end-direction}: auto;
+      #{$start-direction}: 1rem;
+      background: transparent;
+      transform: rotate(15deg);
+      z-index: 5;
+
+      @include ma-sm-screens {
+        width: 150px;
+        height: 150px;
+      }
+
+      &.to-left {
+        #{$end-direction}: auto;
+        #{$start-direction}: 1rem;
+      }
+
+      &.to-right {
+        #{$start-direction}: auto;
+        #{$end-direction}: 1rem;
+      }
+    }
+
+    .video-wrapper {
+      &.on-start {
+        #{$start-direction}: 0;
+        #{$end-direction}: auto;
+        transform: translate(-50% * $x-axe-direction, -50%);
+
+        @include ma-md-screens {
+          #{$start-direction}: 50%;
+          #{$end-direction}: auto;
+          transform: translate(-50% * $x-axe-direction, -50%);
+        }
+      }
+
+      &.on-end {
+        #{$end-direction}: 0;
+        #{$start-direction}: auto;
+        transform: translate(50%, -50%);
+
+        @include ma-md-screens {
+          #{$start-direction}: 50%;
+          #{$end-direction}: auto;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      #{$start-direction}: 50%;
+      #{$end-direction}: auto;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+
+      @include ma-md-screens {
+        top: 100%;
+        #{$start-direction}: 50%;
+        #{$end-direction}: auto;
+      }
+    }
+  }
+
+  .img-area {
+    padding: 0;
+
+    &.framed {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: 2px solid $white-clr;
+        z-index: 5;
+      }
+
+      &::before {
+        border-right: none;
+        border-bottom: none;
+        top: 30px;
+        left: 30px;
+      }
+
+      &::after {
+        border-left: none;
+        border-top: none;
+        bottom: 30px;
+        right: 30px;
+      }
+    }
+
+    .overlay-color {
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    @include ma-md-screens {
+      padding: 0;
+      width: 100%;
+
+      .about-img {
+        max-height: 350px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .wide-img-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    #{$end-direction}: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+
+    .overlay-color {
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    & > img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      min-height: 100%;
+      transform-origin: center;
+      object-fit: cover;
+      @include ma-transition();
+    }
+
+    @include ma-md-screens {
+      position: relative;
+      width: 100%;
+      max-height: 360px;
+    }
+  }
+
+  .text-area {
+    position: relative;
+    padding: 3rem 0;
+
+    .section-heading {
+      margin-bottom: 1rem;
+    }
+
+    .about-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      text-transform: capitalize;
+      font-family: $fontSecondary;
+      margin-bottom: 1.25rem;
+      color: $extra-dark-grey-clr;
+
+      @include ma-sm-screens {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    .about-text {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: $extra-dark-grey-clr;
+      opacity: 0.75;
+      letter-spacing: 0.5px;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .info-items-list {
+      .menu-items {
+        margin: 0;
+        padding: 2rem 0;
+        list-style: none;
+      }
+
+      .info-item {
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+
+        @include ma-sm-screens {
+          flex-direction: column;
+        }
+
+        &:hover {
+          .info-icon,
+          .info-img-icon {
+            transform: translateY(-5px);
+          }
+        }
+      }
+
+      .info-content {
+        padding-#{$end-direction}: 3rem;
+      }
+
+      .info-title {
+        font-family: $fontSecondary;
+        margin-bottom: 0.75rem;
+        color: $black-clr;
+        opacity: 0.95;
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+      }
+
+      .info-text {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $black-clr;
+        opacity: 0.75;
+      }
+
+      .info-icon {
+        margin-#{$end-direction}: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: $main-clr;
+        font-size: 2.5rem;
+
+        @include ma-transition(transform, 0.3s);
+      }
+
+      .info-img-icon {
+        margin-#{$end-direction}: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 60px;
+        height: 60px;
+        @include ma-transition(transform, 0.3s);
+      }
+    }
+
+    .about-stats {
+      margin-bottom: 2rem;
+
+      &.stats-cards {
+        .stat-box {
+          position: relative;
+          text-align: center;
+          padding: 1.5rem;
+          margin-bottom: 0;
+          margin-bottom: 2rem;
+          border: 1px solid rgba($main-clr, 0.35);
+          border-bottom: 0.25rem solid rgba($main-clr, 1);
+          @include ma-box-shadow(1, 1, 10, 0, rgba($black-clr, 0.1));
+
+          .stat-desc {
+            opacity: 0.75;
+          }
+
+          .stat-icon {
+            position: absolute;
+            top: 1rem;
+            #{$start-direction}: 1rem;
+            font-size: 3rem;
+            color: rgba($main-clr, 0.25);
+          }
+        }
+      }
+
+      .stat-box {
+        text-align: center;
+        padding: 1.5rem;
+        margin-bottom: 0;
+
+        .stat-num {
+          color: $black-clr;
+          opacity: 0.95;
+          font-family: $fontSecondary;
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 0.25rem;
+          display: inline-block;
+          position: relative;
+
+          .sign {
+            font-size: 2.5rem;
+            color: $main-clr;
+            font-weight: 600;
+            position: absolute;
+            #{$start-direction}: 0;
+            top: 50%;
+            transform: translate(-100% * $x-axe-direction, -50%);
+          }
+        }
+
+        .stat-desc {
+          font-size: 0.95rem;
+          font-weight: 700;
+          line-height: 1.2;
+          color: $black-clr;
+          opacity: 0.75;
+          text-transform: capitalize;
+        }
+
+        @include ma-md-screens {
+          .stat-num {
+            font-size: 2rem;
+            font-weight: 700;
+
+            .sign {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .cta-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .signature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .signature-img {
+          max-width: 200px;
+          width: 200px;
+          height: 70px;
+          background-image: url("../assets/images/about/signature-dark.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          @include ma-xs-screens {
+            max-width: 150px;
+            max-height: 50px;
+          }
+        }
+
+        .signature-name {
+          display: block;
+          color: $main-clr;
+          margin-top: -0.5rem;
+          text-transform: capitalize;
+
+          @include ma-xs-screens {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.dark-section {
+    background-color: $extra-dark-grey-clr;
+
+    .text-area {
+      .tag-line,
+      .section-title,
+      .about-title,
+      .init-text,
+      .about-text,
+      .info-items-list .info-title,
+      .info-items-list .info-text,
+      .about-stats .stat-box .stat-num,
+      .about-stats .stat-box .stat-desc {
+        color: $white-clr;
+      }
+
+      .cta-area .signature .signature-img {
+        background-image: url("../assets/images/about/signature-light.png");
+      }
+    }
+  }
+}
