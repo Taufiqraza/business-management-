@@ -3,34 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Sign Up</h1>
-    <form id="form1">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <button type="button" id="next1">Next</button>
-    </form>
-    <form id="form2" style="display: none;">
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-      <label for="confirm-password">Confirm Password:</label>
-      <input type="password" id="confirm-password" name="confirm-password" required>
-      <button type="button" id="prev1">Previous</button>
-      <button type="button" id="next2">Next</button>
-    </form>
-    <form id="form3" style="display: none;">
-      <label for="address">Address:</label>
-      <textarea id="address" name="address"></textarea>
-      <button type="button" id="prev2">Previous</button>
-      <button type="submit" id="submit">Submit</button>
+  <div class="container form_cont">
+    <div class="progress-bar">
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+    <form id="signup-form">
+      <div class="form-step">
+        <h2>Type of Company</h2>
+        <h4 class="sub_heading">Chose your company type</h4>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="radio" id="name" name="name" checked-data="Private Limited Company" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-step">
+        <h2>Contact Information</h2>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+      </div>
+      <div class="form-step">
+        <h2>Education</h2>
+        <div class="form-group">
+          <label for="degree">Highest Degree:</label>
+          <select id="degree" name="degree" required>
+            <option value="">Select Degree</option>
+            <option value="high-school">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">PhD</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="institution">Institution:</label>
+          <input type="text" id="institution" name="institution" required>
+        </div>
+      </div>
+      <div class="form-step">
+        <h2>Work Experience</h2>
+        <div class="form-group">
+          <label for="company">Company Name:</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+          <label for="job-title">Job Title:</label>
+          <input type="text" id="job-title" name="job-title">
+        </div>
+        <div class="form-group">
+          <label for="employment-duration">Employment Duration:</label>
+          <input type="text" id="employment-duration" name="employment-duration">
+        </div>
+      </div>
+      <div class="form-step">
+        <h2>Additional Information</h2>
+        <div class="form-group">
+          <label for="skills">Skills:</label>
+          <textarea id="skills" name="skills"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="interests">Interests:</label>
+          <textarea id="interests" name="interests"></textarea>
+        </div>
+      </div>
+      <div class="form-navigation">
+        <button type="button" id="prev-btn" disabled>Previous</button>
+        <button type="button" id="next-btn">Next</button>
+      </div>
     </form>
   </div>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
