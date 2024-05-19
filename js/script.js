@@ -71,11 +71,11 @@ function showStep(step) {
   });
 }
 
-const radioInputs = document.querySelectorAll('.radio-input');
+const radioInputs = document.querySelectorAll('.form-input');
 
 radioInputs.forEach(radioInput => {
   radioInput.addEventListener('click', () => {
-    const selectedValue = document.querySelector('.radio-input:checked').value;
+    const selectedValue = document.querySelector('.form-input:checked').value;
     console.log(`Selected value: ${selectedValue}`);
   });
 });
