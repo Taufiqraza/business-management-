@@ -4,6 +4,9 @@
 .container-fluid {
     padding-left: 80px;
     padding-right: 80px;
+}
+
+.con-bg{
     background-color: #fff;
 }
 
