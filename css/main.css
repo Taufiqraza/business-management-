@@ -8427,7 +8427,7 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
     }
     
     .bg-white.scrolled {
-        background: #034e83 !important;
+        background: #c35023 !important;
         box-shadow: 0 0 25px #ababab
     }
     
@@ -9868,14 +9868,14 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
     
     .government_register .reg_box {
         box-shadow: 0 0 7px 1px #c0b6b6;
-        background: #034e83;
+        background: #c35023;
         width: 100%;
         min-height: 420px;
         border-radius: 6px
     }
     
     .government_register .reg_box ul li {
-        background: #034e83;
+        background: #c35023;
         color: #fff
     }
     
@@ -10084,173 +10084,6 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
 
 /* sign up page*/
 
-.signup_form {
-    font-family: Arial, sans-serif;
-    background-color: #202020;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
-  }
-
-  .form_cont {
-    max-width: 600px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin:0 auto;
-  
-  }
-
-  .progress-bar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-
-  .step {
-    width: 30px;
-    height: 30px;
-    background-color: #666;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #fff;
-    position: relative;
-  }
-
-  .step.completed {
-    background-color: #202020;
-  }
-
-  .step.active::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #c35023;
-  }
-
-  .form-step {
-    display: none;
-  }
-  
-  .form-step.active {
-    display: block;
-  }
-  
-  .form-navigation {
-    margin-top: 20px;
-    text-align: right;
-  }
-
-  .form-navigation button {
-    padding: 10px 20px;
-    background-color: #202020;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .form-navigation button:hover {
-    background-color: #c35023;
-    color: #fff;
-  }
-
-  .form-input{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-
-  .form-content{
-    display: flex;
-    background-color: #c35023;
-    justify-content: center;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    border-radius: 4px;
-    padding: 10px 0px;
-    border : 2px solid #202020;
-  }
-
-  .form-input:checked ~ .form-content{
-    background-color: #202020;
-  }
-  
- /* .form-navigation button:disabled {
-    background-color: #666;
-    cursor: not-allowed;
-  }*/
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #c35023;
-  }
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #c35023;
-  border-radius: 4px;
-  background-color: #fff;
-  color: #202020;
-  font-size: 16px;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  box-shadow: 0 0 5px #c35023;
-}
-
-textarea {
-    resize: vertical;
-    height: 100px;
-  }
-  
-  
-  select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23c35023'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 30px;
-  }
-  
-  .form-step h2 {
-    color: #202020;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
 
   
 /* Extra small devices (phones, 600px and down) */
@@ -10263,6 +10096,10 @@ textarea {
     }
     .menu-mob a{
        padding-left:15px;
+    }
+
+    header-cta-btn{
+        display:block;
     }
 }
 
