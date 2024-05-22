@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/startup/css/style.css"/>
+  <link rel="stylesheet" href="startup/css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -290,7 +290,7 @@ function next() {
     if($(this).val()==''){
       invalid=false;
       $(this).css({
-        "background":"#f46a6a38",
+        "background":"#202020",
         "border-color":"#f46a6ae0"
       })
     }else{
@@ -304,7 +304,7 @@ function next() {
     if($(this).val()==0){
       invalid=false;
       $(this).css({
-        "background":"#f46a6a38",
+        "background":"#202020",
         "border-color":"#f46a6ae0"
       })
     }else{
@@ -325,7 +325,7 @@ function next() {
     }else{
       invalid=false;
       $(this).css({
-        "background":"#f46a6a38",
+        "background":"#202020",
         "border-color":"#f46a6ae0"
       })
     }
@@ -339,7 +339,7 @@ $(".current_tab_input").each(function(){
   if(isEmailAddress(user_email)==false){    
       email_invalid=false;      
       $(this).css({
-        "background":"#f46a6a38",
+        "background":"#202020",
         "border-color":"#f46a6ae0"
       })
   }else{
@@ -357,7 +357,7 @@ $(".current_tab_input").each(function(){
     if(phonenumber(user_mobile)==false){   
         mobile_invalid=false;
         $(this).css({
-          "background":"#f46a6a38",
+          "background":"#202020",
           "border-color":"#f46a6ae0"
         })
     }else{
