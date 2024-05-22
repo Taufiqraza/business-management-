@@ -838,4 +838,31 @@ main_window.on("load", function() {
 /*----------------- End Loading Event functions -----------------*/
 
 
+/*----------------- Start pop up div -----------------  */
 
+const element = document.getElementById("alertPopDiv");
+setInterval(function() {
+    var enquiryID=parseFloat($('#alertEID').val()) + 1;
+    if(enquiryID=='19'){
+        var enquiryID = 1;
+    }
+	$.ajax({
+			type: "POST",
+			url: "getAlertpopup.php",
+			data: "enquiry_id="+enquiryID, 
+			cache: false,
+			success: function(response){
+		    var mesg= response.split('#');
+			if(mesg[0]=='success'){	
+			   $('#alertPop').html(mesg[1]);
+		       $('#alertEID').val(enquiryID);
+				document.getElementById('alertPopDiv').style.display="flex";
+		   }
+	     }
+	 });
+setTimeout(function() {
+ document.getElementById('alertPopDiv').style.display="none";
+}, 10000);
+}, 24000);
+
+/*----------------- End pop up div  -----------------*/

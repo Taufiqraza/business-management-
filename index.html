@@ -986,13 +986,19 @@
         </div>
     </footer>
     <!-- End  page-footer Section-->
-    <!-- Start loading-screen Component-->
-    <div class="loading-screen" id="loading-screen"><span class="bar top-bar"></span><span class="bar down-bar"></span><span class="progress-line"></span><span class="loading-counter"> </span></div>
-    <!-- End loading-screen Component-->
     <!-- Start back-to-top Component-->
     <div class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up icon"></i></div>
     <!-- End back-to-top Component-->
-
+    <!--start popupdiv-->
+    <div class="pop-fixed" id="alertPopDiv" style="display: flex;">
+        <img src="admin/style/images/icon-logo.jpg" alt="">
+        <div class="ml-2">
+        <span id="alertPop"><h4>soni francis</h4><p>From Chennai Recently Purchased @12AA And 80G Registration</p></span>
+        <input type="hidden" id="alertEID" value="17">
+        </div>
+        <button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; closewidepop()" class="close-wide-pop"><i class="fa fa-times"></i></button>
+    </div>
+    <!--End popupdiv-->
     <!--     JQuery     -->
     <script src="js/vendors/jquery-3.4.1.min.js"></script>
 

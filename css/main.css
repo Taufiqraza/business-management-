@@ -1437,61 +1437,6 @@ body.squared-btns .swiper-button-next {
     background-color: rgba(220, 53, 69, 0.5);
 }
 
-.loading-screen {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99999;
-    background: #121212;
-}
-
-.loading-screen .bar {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background-color: #c35023;
-}
-
-.loading-screen .top-bar {
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: auto;
-}
-
-.loading-screen .down-bar {
-    bottom: 0;
-    top: auto;
-    right: 0;
-    left: auto;
-}
-
-.loading-screen .progress-line {
-    position: absolute;
-    width: 100%;
-    top: 60%;
-    left: 0;
-    right: auto;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.35);
-    transform: scale(0);
-    transform-origin: center;
-}
-
-.loading-screen .loading-counter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-family: "Merriweather", "sans-serif";
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-/* End loading screen rules */
 
 .header-search-box {
     position: fixed;
@@ -10084,8 +10029,62 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
 
 /* sign up page*/
 
+/* popup div */
 
-  
+
+.pop-fixed{
+	display: flex;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 5px;
+    left: 10px;
+    width: 300px;
+    height: 90px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    -webkit-box-shadow: 0px 0px 61px -16px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 61px -16px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px -16px rgb(0 0 0 / 32%);
+    animation: top-bottom .9s linear;
+    z-index: 9999;
+    color:#c35023;
+}
+@keyframes top-bottom{
+	from{
+        bottom: -100px;
+    }
+    to{
+        bottom: 20px;
+    }
+}
+.pop-fixed img{
+	width: 55px;
+    height: 55px;
+    border-radius: 5px;
+}
+.pop-fixed h4{
+	font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+.pop-fixed p{
+	font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.close-wide-pop {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    background: none;
+    border: none;
+    color: #f00;
+    transition: all .4s;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .desktop-menu{
