@@ -8628,7 +8628,7 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
     
     #consultant-section {
         height: 372px;
-        background: #034d82
+        background: #c35023
     }
     
     .consultant-inner {
@@ -8697,7 +8697,7 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
         font-size: 16px;
         line-height: 22px;
         text-transform: uppercase;
-        color: #034d82;
+        color: #c35023;
         margin-bottom: 25px
     }
     
@@ -9047,7 +9047,7 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
     }
     
     .footerback {
-        background: #034d82;
+        background: #c35023;
         position: relative
     }
     
@@ -9746,7 +9746,7 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
     }
     
     .chat-popup {
-        background: #034d82;
+        background: #c35023;
         padding: 14px;
         width: 60px;
         display: flex;
@@ -9941,13 +9941,13 @@ body.dark-theme .signing-page .agree-terms .disclaimer {
     .table>thead {
         vertical-align: middle;
         text-align: center;
-        background: #034d82;
+        background: #c35023;
         height: 50px
     }
     
     .table-light {
         --bs-table-color: #fff;
-        --bs-table-bg: #034D82
+        --bs-table-bg: #c35023
     }
     
     .table-group-divider {

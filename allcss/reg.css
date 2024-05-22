@@ -362,7 +362,7 @@ a.nav-link {
     font-size: 16px;
     line-height: 22px;
     text-transform: uppercase;
-    color: #034d82;
+    color: #c35023;
     margin-bottom: 25px
 }
 
@@ -1405,7 +1405,7 @@ ul.tab-list li {
 }
 
 .chat-popup {
-    background: #034d82;
+    background: #c35023;
     padding: 14px;
     width: 60px;
     display: flex;
@@ -1600,13 +1600,13 @@ h4.particular-hd {
 .table>thead {
     vertical-align: middle;
     text-align: center;
-    background: #034d82;
+    background: #c35023;
     height: 50px
 }
 
 .table-light {
     --bs-table-color: #fff;
-    --bs-table-bg: #034D82
+    --bs-table-bg: #c35023
 }
 
 .table-group-divider {
