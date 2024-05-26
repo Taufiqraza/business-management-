@@ -40,14 +40,9 @@
 <body class="   rounded-btns ">
   <!--Start Page Header-->
   <header class="nav-wrapper">
-    <nav class="navbar navbar-expand-xl">
-      <div class="container-fluid"> <a class="navbar-brand" href="https://corpbiz.io"><img
-            src="admin/style/images/logo_logo.png" alt="Corpbiz"></a>
-
-        <a href="https://api.whatsapp.com/send?phone=919289379709&amp;text=Hi Corpbiz"
-          class="hide-on-desktop add-icon"><img src="img/whatsapp.png" alt="Whatsapp Now : 9289379709"></a>
-        <a href="tel:9121230280" class="hide-on-desktop add-icon"><img src="img/phone.png"
-            alt="Call Now : 9121230280"></a>
+    <nav class="navbar navbar-expand-xl nav-bg">
+      <div class="container-fluid"> <a class="navbar-brand" href="index.html"><img
+            src="assets/images/logo/logo-dark.png" alt="Corpbiz"></a>
         <a class="login-btn hide-on-desktop add-icon" href="login">Login</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -1232,26 +1227,17 @@
                 </ul>
               </div>
             </li>
-
-            <li class="nav-item hide-me-mobile">
-              <div class="d-flex justify-content-between">
-                <a href="https://api.whatsapp.com/send?phone=919289379709&amp;text=Hi Corpbiz"
-                  class="nav-link me-2"><img src="img/whatsapp.png" alt="Whatsapp Now : 9289379709"></a>
-                <a href="tel:9121230280" class="nav-link"><img src="img/phone.png"
-                    alt="Call Now : 9121230280">&nbsp;<span>9121230280</span></a>
-              </div>
-            </li>
             <li class="nav-item hide-me-mobile"> <a class="nav-link my-business-btn"
-                href="startup-company-registration-in-india">Start My Business</a> </li>
+                href="register.html">Start My Business</a> </li>
             <li class="nav-item hide-me-mobile"> <a class="nav-link login-new-btn" href="login">Login</a> </li>
 
             <li class="nav-item nav-item dropdown"> <a class="nav-link dropdown-toggle after-none"
                 href="javascript:void(0);" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><span class="hide-on-desktop">Company</span><img src="img/menu.png"
+                aria-expanded="false"><span class="hide-on-desktop">Company</span><img src="assets/images/fav-icon/menu.png"
                   alt="Company Menu"></a>
               <ul class="dropdown-menu drop-more" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="about-us">About Us</a></li>
-                <li><a class="dropdown-item" href="https://corpbiz.io/learning" target="_blank">Learning</a></li>
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="learning.html" target="_blank">Learning</a></li>
                 <li><a class="dropdown-item" href="https://corpbiz.io/learning/newsletter">Newsletter</a></li>
                 <li><a class="dropdown-item" href="https://corpbiz.io/learning/publications/">Publications</a></li>
 
@@ -3042,6 +3028,43 @@
     </div>
   </footer>
   <!-- End  page-footer Section-->
+
+  <!--chat popup-->
+  <div class="chat-pop-up-window">
+    <button type="button"><img src="img/chat-icon.png" alt="Corpbiz Chat"></button>
+  </div>
+
+<div class="fixed-fullscreen-chat" style="display:none">
+    <ul class="list-unstyled chat-option-list">
+        <li>
+            <a href="https://web.whatsapp.com/send?phone=919289379709&text=Hi Corpbiz" target="_blank"
+                class="for-dekstop">
+                <div class="d-flex align-items-center"><img src="img/whatsapp-icon.png" alt="whatsaap">
+                    <p class="m-0 ml-2">Chat on Whatsapp</p>
+                </div>
+            </a>
+            <a href="whatsapp://send?phone=919289379709&text=Hi Corpbiz" class="for-mobile">
+                <div class="d-flex align-items-center"> <i class="fa fa-whatsapp" style="color: #1ad51f;"></i>
+                    <p class="m-0 ml-2">Chat on Whatsapp</p>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a id="tars-widget-fab" href="#"
+                onclick="if (!window.__cfRLUnblockHandlers) return false; chatbotNavigate()"
+                data-cf-modified-65d709a6f32e312eb21271ef->
+                <div class="d-flex align-items-center">
+                    <i class="fa fa-comment" style="color: #1ad51f;"></i>
+                    <p class="m-0 ml-2">Hey I'm Ruchi. Let's Talk!</p>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+    <button type="button" class="close-chat-pop-up"><i class="fa fa-times"></i></button>
+</div>
+
   <!--start popupdiv-->
   <div class="pop-fixed" id="alertPopDiv" style="display: flex;">
     <img src="admin/style/images/icon-logo.jpg" alt="">

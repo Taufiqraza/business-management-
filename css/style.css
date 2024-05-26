@@ -4146,7 +4146,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #0a58ca
+    color: #fff;
 }
 
 .nav-link.disabled {
@@ -4237,7 +4237,11 @@ fieldset:disabled .btn {
     align-items: center;
     justify-content: space-between;
     padding-top: .5rem;
-    padding-bottom: .5rem
+    padding-bottom: .5rem;
+}
+
+.nav-bg{
+    background-color: #c35023;
 }
 
 .navbar>.container,
@@ -5693,12 +5697,12 @@ fieldset:disabled .btn {
 
 @media(prefers-reduced-motion:reduce) {
     .modal.fade .modal-dialog {
-        transition: none
+        transition: none;
     }
 }
 
 .modal.show .modal-dialog {
-    transform: none
+    transform: none;
 }
 
 .modal.modal-static .modal-dialog {
@@ -10664,9 +10668,6 @@ body {
     width: 150px
 }
 
-header {
-    border-bottom: 2px solid #f2f2f2
-}
 
 ul.nav-corpbiz li a {
     font-size: var(--font-16);
@@ -15441,7 +15442,7 @@ ul.latest-blogs li {
     left: 0;
     z-index: 999999;
     width: 100%;
-    background: #fff !important;
+    background: #c35023 !important;
     width: 100%;
     background: #fff;
     -webkit-box-shadow: 2px 9px 25px -12px rgb(0 0 0/75%);
@@ -23195,7 +23196,7 @@ tbody p {
 }
 
 div#v-pills-tab-menuContent {
-    background: #f8fafc;
+    background: #c35023;
     width: 75%;
     padding: 40px 48px;
     height: 65vh;
@@ -23210,7 +23211,8 @@ ul.dropdown-menu.dropdown-new {
     left: 50px;
     position: fixed !important;
     padding: 0;
-    box-shadow: 0 15px 30px -25px #1f8506
+    box-shadow: 0 15px 30px -25px #1f8506;
+    background:#c35023;
 }
 
 #v-pills-tab-menu a {
@@ -23279,7 +23281,7 @@ div#v-pills-tab-menu {
 }
 
 a.nav-link.dropdown-toggle.nav-border.navdropdown.activecolor {
-    color: #efa434 !important;
+    color: #020202 !important;
     font-weight: 700
 }
 
