@@ -1,0 +1,54 @@
+iframe[src*=ads-iframe] {
+    display: none
+}
+
+.btn-download-newsletter {
+    width: var(--full-width);
+    color: var(--white);
+    font-weight: var(--fw-600);
+    background: #f60;
+    border-radius: var(--br4);
+    border: var(--none);
+    padding: 10px 30px
+}
+
+.btn-download-newsletter:hover {
+    background: #285785;
+    color: #fff
+}
+
+.saswp-faq-block-section {
+    color: #000;
+    margin: auto
+}
+
+.saswp-faq-block-section ol {
+    padding-left: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1)
+}
+
+.saswp-faq-block-section li {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff
+}
+
+.saswp-faq-block-section h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000
+}
+
+.saswp-faq-block-section p {
+    margin: 0;
+    font-size: .9em;
+    line-height: 1.5;
+    padding: 10px 0 0
+}
+
+.saswp-faq-block-section li:last-child {
+    border-bottom: none
+}
