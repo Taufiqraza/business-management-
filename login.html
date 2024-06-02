@@ -8,9 +8,9 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="556d817cd175872fd162c083-|49" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-23GJ6KD8KW" type="556d817cd175872fd162c083-text/javascript"></script>
 </head>
-
 <body>
   <header class="nav-wrapper">
     <nav class="navbar navbar-expand-xl nav-bg">
@@ -2264,21 +2264,31 @@
                         <h2>Login</h2>
                         <p class="login-sub-heading">Login and Join the league of 1 Million+ People and get the most out of all the services you use.</p>
                         <div class="form-login">
-                            <form action="validateotp" name="formObj" method="post" onSubmit="if (!window.__cfRLUnblockHandlers) return false; return loginValidate(this)" data-cf-modified-556d817cd175872fd162c083->
-                                <label>*Mobile Number</label>
-                                <div class="position-relative">
-                                    <input type="text" name="member_mobile" id="member_mobile" placeholder="Enter Your Mobile No*" class="form-control" minlength="10" maxlength="10" size="10" required data-validation-required-message="Please enter your mobile No." autocomplete="off">
-                                    <img src="img/phone-login.png" alt="Login" class="phone-login-icon"> </div>
-                                <button type="submit" value="Login">Login</button>
-                                <p class="create-account">Login With Email ID and Password <a href="login-with-email">Click Login</a></p>
-                            </form>
+                          <form action="#" name="formObj" method="post" onSubmit="return handleFormSubmit(event)">
+                            <label>*Mobile Number</label>
+                            <div class="position-relative">
+                              <input type="text" name="member_mobile" id="member_mobile" placeholder="Enter Your Mobile No*" class="form-control" minlength="10" maxlength="10" size="10" required data-validation-required-message="Please enter your mobile No." autocomplete="off">
+                              <img src="img/phone-login.png" alt="Login" class="phone-login-icon">
+                            </div>
+                            <button type="submit" value="Login">Login</button>
+                            <p class="create-account">Login With Email ID and Password <a href="login-with-email">Click Login</a></p>
+                          </form>
+                          
+                          <!-- OTP Modal -->
+                          <div id="otp-modal" class="modal">
+                            <div class="modal-cont">
+                              <span class="close">&times;</span>
+                              <label>OTP</label>
+                              <input type="text" id="otp-input" placeholder="Enter OTP">
+                              <button id="verify-otp">Verify OTP</button>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="556d817cd175872fd162c083-text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js" type="556d817cd175872fd162c083-text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js" type="556d817cd175872fd162c083-text/javascript"></script>
@@ -2309,7 +2319,53 @@
             }
         });
     </script>
-    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="556d817cd175872fd162c083-|49" defer></script>
+    <script>
+ function generateOTP() {
+  return Math.floor(100000 + Math.random() * 900000);
+}
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  const mobileNumber = document.getElementById('member_mobile').value;
+
+  // Generate the OTP
+  const otp = generateOTP();
+  alert(`Your OTP is: ${otp}`);
+
+  // Show the OTP modal
+  showModal();
+
+  document.getElementById('verify-otp').addEventListener('click', () => {
+    const enteredOtp = document.getElementById('otp-input').value;
+
+    if (enteredOtp === otp.toString()) {
+      window.location.href = '/logged_in.html';
+    } else {
+      alert('Invalid OTP. Please try again.');
+    }
+  });
+}
+
+function showModal() {
+  const modal = document.getElementById('otp-modal');
+  const span = document.getElementsByClassName('close')[0];
+
+  // Show the modal
+  modal.style.display = 'block';
+
+
+  span.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+}
+    </script>
 </body>
 
 </html>

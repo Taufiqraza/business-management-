@@ -54,7 +54,42 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent
 }
-
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+  }
+  
+  /* Modal content */
+  .modal-cont {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -10762,7 +10797,7 @@ ul.nav-corpbiz li {
 }
 
 .search-box .position-relative input {
-    height: var(--mt-55);
+    height: var(--mt-50);
     border-radius: var(--br8)
 }
 
@@ -22782,8 +22817,8 @@ input:focus {
 }
 
 .login-card .login-img-back img {
-    width: 350px !important;
-    height: 245px !important;
+    width: 350px;
+    height: 245px ;
     margin: 0 auto
 }
 
